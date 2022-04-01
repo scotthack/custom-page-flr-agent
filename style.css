@@ -1,0 +1,91 @@
+/* ===================================
+    question and answer section
+===================================== */
+/* qesiton section. classname="ques-section" */
+.ques-section {
+    padding-bottom: 100px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+}
+
+/* title "10 Questions with Diedre". classname="section-title" */
+.section-title {
+    font-size: calc(var(--sis-font-size-base)*2);
+    line-height: 1.2;
+    text-align: center;
+    margin: 1em 0px;
+}
+
+/* boxes container on desktop. classname="box-container" */
+.box-container-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+    .box-container-desktop {
+        display: none;
+    }
+}
+/* boxes container on mobile. classname="box-container" */
+.box-container-mobile {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .box-container-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 0 1rem;
+    }
+}
+/* boxes on desktop. classname="boxes-desktop" */
+.boxes-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* box on desktop. classname="box-desktop" */
+.box-desktop {
+    background: white;
+    border: 1px solid #e3e9ef;
+    width: calc(100% - 60px);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+@media only screen and (max-width: 1024px) {
+    .box-desktop {
+        padding: 15px;
+    }
+}
+/* box on mobile. classname="box-mobile" */
+.box-mobile {
+    background: white;
+    border: 1px solid #e3e9ef;
+}
+@media only screen and (max-width: 1024px) {
+    .box-mobile {
+        padding: 15px;
+    }
+}@media only screen and (max-width: 768px) {
+    .box-container-mobile .box-mobile {
+        width: auto;
+    }
+}
+
+/* question number. classname="question-number" */
+.question-number {
+    font-size: calc(var(--sis-font-size-base)*2);
+    line-height: 1.2;
+    color: #d15e14;
+}
+/* question title. should use h3 tag. classname="box-question" */
+h3 .box-question {
+    font-size: 1.333rem;
+    line-height: 1.2;
+}
+/* answer. should use p tag. */
